@@ -35,10 +35,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp N1        &kp N2          &kp N3      &kp N4      &kp N5          &kp QMARK  &kp UP_ARROW  &kp EXCLAMATION  &kp N9             &kp HOME  &kp PG_UP
-&kp DEL        &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0          &kp LEFT   &kp DOWN      &kp RIGHT        &kp PRINTSCREEN    &kp END   &kp PAGE_DOWN
-&bt BT_DISC 0  &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0    &kp LPAR   &kp RPAR      &kp LBKT         &kp RIGHT_BRACKET  &kp LBRC  &kp RBRC
-                                             &kp LGUI    &trans      &kp SPACE       &kp RET    &trans        &kp RALT
+&kp TAB        &kp N1        &kp N2          &kp N3      &kp N4      &kp N5          &kp DELETE  &kp UP_ARROW  &kp EXCLAMATION  &kp N9             &kp HOME  &kp PG_UP
+&kp DEL        &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0          &kp LEFT    &kp DOWN      &kp RIGHT        &kp PRINTSCREEN    &kp END   &kp PAGE_DOWN
+&bt BT_DISC 0  &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0    &kp LPAR    &kp RPAR      &kp LBKT         &kp RIGHT_BRACKET  &kp LBRC  &kp RBRC
+                                             &kp LGUI    &trans      &kp SPACE       &kp RET     &trans        &kp RALT
             >;
         };
 
