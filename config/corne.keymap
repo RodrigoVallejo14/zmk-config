@@ -9,6 +9,36 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(S) &kp U &kp P &kp N3 &kp R &kp DOT &kp N4 &kp D &kp M &kp N1 &kp N &kp DOT &kp LS(C) &kp N4 &kp M &kp N3>;
+            label = "NEW_MACRO";
+        };
+
+        new_macro_1: new_macro_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(D) &kp I &kp N &kp O &kp S &kp A &kp U &kp R &kp I &kp A &kp DOT>;
+            label = "NEW_MACRO_1";
+        };
+
+        new_macro_2: new_macro_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp R &kp O &kp D &kp R &kp I &kp G &kp O &kp DOT &kp V &kp A &kp L &kp L &kp E &kp J &kp O>;
+            label = "NEW_MACRO_2";
+        };
+
+        new_macro_3: new_macro_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp R &kp O &kp D &kp R &kp I &kp G &kp O &kp DOT &kp V &kp A &kp L &kp L &kp E &kp J &kp O &kp AT &kp L &kp I &kp M &kp M &kp A &kp T &kp MINUS &kp G &kp R &kp O &kp U &kp P &kp DOT &kp C &kp O &kp M>;
+            label = "NEW_MACRO_3";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,10 +50,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y    &kp U         &kp I      &kp O    &kp P      &kp BSPC
-&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F  &kp G        &kp H    &kp J         &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N    &kp M         &kp COMMA  &kp DOT  &kp MINUS  &kp RALT
-                                &mo 1  &mo 2  &kp SPACE    &kp RET  &kp LEFT_WIN  &kp LALT
+&kp TAB           &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y    &kp U         &kp I            &kp O    &kp P      &kp BSPC
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F  &kp G        &kp H    &kp J         &kp K            &kp L    &kp SEMI   &kp SQT
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N    &kp M         &kp COMMA        &kp DOT  &kp MINUS  &kp LEFT_ALT
+                                &mo 2  &mo 1  &kp SPACE    &kp RET  &kp LEFT_WIN  &kp RIGHT_SHIFT
             >;
         };
 
@@ -35,10 +65,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB        &kp N1        &kp N2          &kp N3      &kp N4      &kp N5          &kp DELETE  &kp UP_ARROW  &kp EXCLAMATION  &kp N9             &kp HOME  &kp PG_UP
-&kp DEL        &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0          &kp LEFT    &kp DOWN      &kp RIGHT        &kp PRINTSCREEN    &kp END   &kp PAGE_DOWN
-&bt BT_DISC 0  &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0    &kp LPAR    &kp RPAR      &kp LBKT         &kp RIGHT_BRACKET  &kp LBRC  &kp RBRC
-                                             &kp LGUI    &trans      &kp SPACE       &kp RET     &trans        &kp RALT
+&kp ESCAPE     &kp EXCLAMATION  &kp AT_SIGN     &kp HASH    &kp DOLLAR  &kp AMPS        &kp QUESTION  &kp UP_ARROW  &kp EXCLAMATION  &kp PAGE_UP        &kp PAGE_DOWN  &kp DELETE
+&kp PERCENT    &kp F1           &kp F2          &kp F5      &kp F11     &kp F12         &kp LEFT      &kp DOWN      &kp RIGHT        &kp PRINTSCREEN    &kp HOME       &kp END
+&bt BT_DISC 0  &bt BT_CLR       &bt BT_CLR_ALL  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 0    &kp LPAR      &kp RPAR      &kp LBKT         &kp RIGHT_BRACKET  &kp LBRC       &kp RBRC
+                                                &kp LGUI    &trans      &kp SPACE       &kp RET       &trans        &kp RALT
             >;
         };
 
@@ -50,10 +80,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL       &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp ASTRK  &kp BACKSLASH  &kp N7        &kp N8        &kp N9
-&kp LCTRL  &kp AMPERSAND  &kp F1  &kp F5    &kp F11   &kp F12      &kp MINUS  &kp EQUAL  &kp PIPE       &kp NUMBER_4  &kp N5        &kp NUMBER_6
-&kp LSHFT  &trans         &trans  &trans    &trans    &trans       &kp SLASH  &kp PLUS   &kp NUMBER_0   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-                                  &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp ESCAPE  &kp EXCL       &kp AT        &kp BACKSLASH  &kp PIPE      &kp SLASH       &kp PLUS   &kp MINUS  &kp N7        &kp N8        &kp N9        &kp BACKSPACE
+&kp LCTRL   &kp AMPERSAND  &kp F1        &kp F5         &kp F11       &kp F12         &kp ASTRK  &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp COMMA
+&kp LSHFT   &trans         &new_macro_3  &new_macro     &new_macro_2  &new_macro_1    &kp EQUAL  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp DOT
+                                         &kp LGUI       &trans        &kp SPACE       &kp RET    &trans     &kp RALT
             >;
         };
     };
